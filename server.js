@@ -25,9 +25,9 @@ mongoose
 //IF there's an error log the error message
     .catch(err=> console.log('Errors: ' + err));
 
-//Anything going to api/items will go to the items variable
-    app.use('api/items', items);
-    
+//Anything going to api/items will go to the items variable, can also just be '/'
+    app.use('/api/items', items);
+
 //Set the server port to 5000
     const port = process.env.PORT || 5000;
 //Tell the server to start on port 5000
