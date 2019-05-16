@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 
+const items = require('./routes/api/items');
+
 //Body parser middleware
 app.use(bodyParser.json());
 
@@ -22,6 +24,10 @@ mongoose
     .then(() => console.log("MongoDB connected"))
 //IF there's an error log the error message
     .catch(err=> console.log('Errors: ' + err));
+
+//Anything going to api/items will go to the items variable
+    app.use('api/items', items);
+    
 //Set the server port to 5000
     const port = process.env.PORT || 5000;
 //Tell the server to start on port 5000
