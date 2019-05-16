@@ -1,20 +1,17 @@
 //Import express for data models
 //Mongoose for our actual database
 //Bodyparser for the main app
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
-
 const items = require('./routes/api/items');
-
 //Body parser middleware
 app.use(bodyParser.json());
-
-
 //DB config gets the URL from  keys.js for our mongo DB
 const db = require('./config/keys').mongoURI;
+
+
 
 //Connect to Mongo
 mongoose
