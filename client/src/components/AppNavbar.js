@@ -20,7 +20,7 @@ class AppNavbar extends Component {
 
   toggle = () => {
     this.setState({
-      isOpen: !this.status.isOpen
+      isOpen: !this.state.isOpen
     });
   };
 
@@ -33,6 +33,15 @@ class AppNavbar extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="#">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Contact</NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/rmcc0724">Github</NavLink>
               </NavItem>
