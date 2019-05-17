@@ -17,7 +17,9 @@ class AppNavbar extends Component {
       isOpen: false
     };
   }
-
+ 
+//This sets the state of isOpen to the opposite of the current value - if true set false, vice versa
+//***Note: The isOpen is a default prop for the <Collapse/> tag which is a boolean value
   toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
