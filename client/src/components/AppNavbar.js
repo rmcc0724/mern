@@ -10,7 +10,7 @@ import {
   Container
 } from "reactstrap";
 
-class AppNavBar extends Component {
+class AppNavbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,4 +45,4 @@ class AppNavBar extends Component {
 
   }
 }
- export default AppNavBar;
+export default AppNavbar;
