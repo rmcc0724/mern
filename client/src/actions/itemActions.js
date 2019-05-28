@@ -1,10 +1,24 @@
 // import axios from 'axios';
-import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from './types';
-// import { tokenConfig } from './authActions';
-// import { returnErrors } from './errorActions';
+import { GET_ITEMS, ADD_ITEM, DELETE_ITEM } from './types';
 
-export const getItems = () => {
+export const getItems = () =>  {
+    return {
+      type: GET_ITEMS
+    }
+  }
+
+
+export const addItem = item => {
   return {
-        type: GET_ITEMS
-  }      
-};       
+    type: ADD_ITEM,
+    payload: item
+  }
+}
+
+
+export const deleteItem = id => {
+  return {
+    type: DELETE_ITEM,
+    payload: id
+  }
+}
